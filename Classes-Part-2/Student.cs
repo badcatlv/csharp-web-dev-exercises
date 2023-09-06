@@ -45,7 +45,7 @@ namespace Classes_Part_2
             }
             else if (credits <= 89)
             {
-                return "Junior";
+                return "Junior ";
             }
             else
             {
@@ -70,6 +70,11 @@ namespace Classes_Part_2
             if (obj.GetType() != this.GetType()) { return false; };
             Student studentObj = obj as Student;
             return StudentId == studentObj.StudentId;
+        }
+
+        public override int GetHashCode()
+        {
+            return HashCode.Combine(StudentId);
         }
     }
 }
