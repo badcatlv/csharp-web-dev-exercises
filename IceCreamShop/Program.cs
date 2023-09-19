@@ -15,7 +15,7 @@ availableFlavors.Sort(comparer);
 availableCones.Sort(new ConeComparer());
 foreach (Flavor f in availableFlavors)
 {
-    Console.WriteLine(f.Name + ": " + f.Cost);
+    Console.WriteLine(f.Name + ": " + f.Allergens.ToString());
 }
 foreach (Cone c in availableCones)
 {
