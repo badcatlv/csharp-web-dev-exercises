@@ -1,23 +1,19 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace IceCreamShop
+﻿namespace IceCreamShop
 {
     public class FlavorComparer : IComparer<Flavor>
     {
         public int Compare(Flavor x, Flavor y)
         {
             double diff = x.Allergens.Count.CompareTo(y.Allergens.Count);
-            if (diff == 0 )
+            if (diff == 0)
             {
                 return 0;
-            } else if (diff > 0 ) 
+            }
+            else if (diff > 0)
             {
                 return 1;
-            } else
+            }
+            else
             {
                 return -1;
             }
